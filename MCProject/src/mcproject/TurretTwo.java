@@ -11,7 +11,7 @@ public class TurretTwo extends Turret {
 		 {
 		  super(ImageCache.getImage("turrets/d2.png"));
 		 }
-	
+	/*
 		 public Bullet createBullet() 
 		 {
 		  return new Bullet(ImageCache.getImage("bullets/.png"));
@@ -21,6 +21,6 @@ public class TurretTwo extends Turret {
 		 {
 		  return 0;
 		 
-		}
+		}*/
 		
 }

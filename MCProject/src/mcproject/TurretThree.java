@@ -10,7 +10,7 @@ public class TurretThree extends Turret {
 	 {
 	  super(ImageCache.getImage("turrets/d3.png"));
 	 }
-	
+	/*
 	 public Bullet createBullet() 
 	 {
 	  return new Bullet(ImageCache.getImage("bullets/.png"));
@@ -19,5 +19,5 @@ public class TurretThree extends Turret {
 	 public double getBulletSpeed() 
 	 {
 	  return 0;
-	 }
+	 }*/
 }

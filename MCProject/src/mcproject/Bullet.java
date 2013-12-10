@@ -7,10 +7,9 @@ import jgame.listener.BoundaryRemovalListener;
 
 public class Bullet extends GSprite {
 
-		 public Bullet(Image image) 
-		 {
-		  super(image);
-		  addListener(new BoundaryRemovalListener());
-		 }
-	
+	public Bullet(Image image) {
+		super(image);
+		addListener(new BoundaryRemovalListener());
+	}
+
 }

@@ -12,6 +12,7 @@ public class MCLevelOneView extends GContainer {
 	private l1PlayArea pal1 = new l1PlayArea();
 	private MenuArea ma = new MenuArea();
 	private InfoArea ia = new InfoArea();
+
 	private boolean settingTurret;
 
 	public MCLevelOneView() {
@@ -31,14 +32,8 @@ public class MCLevelOneView extends GContainer {
 		ia.setAnchorTopLeft();
 		ia.setLocation(0, 600);
 		add(ia);
-		
-		
+
 	}
-		
-	
-		
-		
-	
 
 	public void initializeTurret(int tn) {
 		if (settingTurret) {

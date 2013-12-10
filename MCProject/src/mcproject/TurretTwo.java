@@ -7,9 +7,9 @@ import jgame.ImageCache;
 public class TurretTwo extends Turret {
 
 	
-		 public TurretTwo(Image i) 
+		 public TurretTwo() 
 		 {
-		  super(i);
+		  super(ImageCache.getImage("turrets/d2.png"));
 		 }
 	
 		 public Bullet createBullet() 

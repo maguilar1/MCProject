@@ -6,19 +6,15 @@ import jgame.ImageCache;
 
 public class TurretOne extends Turret {
 
-	
-		 public TurretOne(Image image) 
-		 {
-		  super(image);
-		 }
-		
-		 public Bullet createBullet() 
-		 {
-		  return new Bullet(ImageCache.getImage("bullets/.png"));
-		 }
-		
-		 public double getBulletSpeed() 
-		 {
-		  return 30;
-		 }
+	public TurretOne() {
+		super(ImageCache.getImage("turrets/d1.png"));
 	}
+
+	public Bullet createBullet() {
+		return new Bullet(ImageCache.getImage("bullets/.png"));
+	}
+
+	public double getBulletSpeed() {
+		return 30;
+	}
+}

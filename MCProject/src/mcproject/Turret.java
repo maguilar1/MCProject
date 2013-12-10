@@ -13,6 +13,7 @@ public abstract class Turret extends GSprite {
 	 {
 	  super(image);
 	  
+	  /*
 	  this.addListener(new FrameListener() {
 	  //this is the turret
 	   
@@ -38,5 +39,6 @@ public abstract class Turret extends GSprite {
 	  snapAnchor(b);
 	  b.moveAtAngle(getWidth()/ 2 + 20, getRotation());
 	  this.addSibling(b);
+	 }*/
 	 }
 	}

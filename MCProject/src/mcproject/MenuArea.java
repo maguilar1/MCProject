@@ -30,11 +30,12 @@ public class MenuArea extends GContainer {
 			".png");
 
 	private void setTile(int i) {
+		
 		Tile tile = new Tile(tileImages.get(i), i);
 		tile.setAnchorTopLeft();
 		tile.setScale(0.9);
 		tile.setX(4);
-		tile.setY(110 * i + 15);
+		//tile.setY(110 * i + 15);
 		add(tile);
 		tile.setLocation(5, i * 115 + 25);
 	}

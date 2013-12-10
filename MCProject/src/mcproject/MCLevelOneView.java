@@ -31,7 +31,14 @@ public class MCLevelOneView extends GContainer {
 		ia.setAnchorTopLeft();
 		ia.setLocation(0, 600);
 		add(ia);
+		
+		
 	}
+		
+	
+		
+		
+	
 
 	public void initializeTurret(int tn) {
 		if (settingTurret) {

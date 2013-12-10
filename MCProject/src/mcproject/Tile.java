@@ -27,8 +27,7 @@ public class Tile extends GButton {
 
 		addListener(new ButtonListener() {
 			public void mouseClicked(Context context) {
-				getFirstAncestorOf(MCLevelOneView.class).initializeTurret(
-						turretNumber);
+				getFirstAncestorOf(MCLevelOneView.class).initializeTurret(turretNumber);
 			}
 		});
 

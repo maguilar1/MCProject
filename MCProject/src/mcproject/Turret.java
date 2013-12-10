@@ -8,36 +8,47 @@ import jgame.GSprite;
 import jgame.controller.ConstantMovementController;
 import jgame.listener.FrameListener;
 
-public abstract class Turret extends GSprite {
-	public Turret(Image image) {
+public abstract class Turret extends GSprite
+{
+	public Turret(Image image)
+	{
 		super(image);
 
-		this.addListener(new FrameListener() {
-			// this is the turret
-
-			@Override
-			public void invoke(GObject target, Context context) {
+		// final int FireDelay = 20;
+		this.addListener(new FrameListener() 
+		{
+		
+			public void invoke(GObject target, Context context)
+			{
 				target.face(getParent().getWidth() / 2,
 						getParent().getHeight() / 2);
 				target.setRotation(target.getRotation());
 				fireBullet();
-			}
-		});
+				
+			//if(FireDelay <0){
+			//	FireDelay = 24;
+				//}
+	
+		
+		}});
+		
 	}
 
 	public abstract Bullet createBullet();
 
 	public abstract double getBulletSpeed();
 
-	public void fireBullet() {
+	public void fireBullet() 
+	{
 		final Bullet b = createBullet();
 		b.setRotation(this.getRotation());
 
-		final ConstantMovementController c = ConstantMovementController.createPolar(getBulletSpeed(), getRotation());
+		final ConstantMovementController c = ConstantMovementController
+				.createPolar(getBulletSpeed(), getRotation());
 		b.addController(c);
 		snapAnchor(b);
 		b.moveAtAngle(getWidth() / 2 + 20, getRotation());
 		this.addSibling(b);
-
+	 
 	}
 }

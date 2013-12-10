@@ -30,18 +30,13 @@ public class MusicConductor extends Game {
 		
 		
 		
-		//MCLevelOneView mcl1v = new MCLevelOneView();
-		//root.addView(View.LEVEL_ONE, mcl1v);
+		MCLevelOneView mcl1v = new MCLevelOneView();
+		root.addView(View.LEVEL_ONE, mcl1v);
 
 	}
 
 	public enum View {
 		MENU, LEVEL_ONE, GAME;
-	}
-
-	public static void addListener(ButtonListener play_btnlist) {
-		
-		
 	}
 
 }

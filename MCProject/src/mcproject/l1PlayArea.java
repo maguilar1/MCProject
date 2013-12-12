@@ -21,13 +21,15 @@ public class l1PlayArea extends GContainer {
 		GSprite gs = new GSprite(bgi);
 		setBackgroundSprite(gs);
 
-		TimerListener tl = new TimerListener(30) {
+		final TimerListener tl = new TimerListener(30) {
 
 			@Override
 			public void invoke(GObject target, Context context) {
 				addRandomEnemy();
 			}
 		};
+		
+		addListener(tl);
 	}
 
 	public void addRandomEnemy() {

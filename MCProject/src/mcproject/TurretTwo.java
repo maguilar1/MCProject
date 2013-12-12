@@ -14,7 +14,7 @@ public class TurretTwo extends Turret {
 	
 		 public Bullet createBullet() 
 		 {
-		  return new Bullet(ImageCache.getImage("bullets/b1.png"));
+		  return new Bullet(ImageCache.getImage("bullets/b2.png"));
 		 }
 		
 		 public double getBulletSpeed() 

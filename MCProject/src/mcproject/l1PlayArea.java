@@ -33,11 +33,11 @@ public class l1PlayArea extends GContainer {
 	}
 
 	public void addRandomEnemy() {
-		int i = (int) Math.random() * 1;
+		int i = (int) Math.random() * 5;
 		Enemy e = new Enemy1();
-		// if(1 > i){
-		// e = new Enemy1();
-		// }
+		if(1 > i){
+		e = new Enemy1();
+		 }
 		add(e);
 	}
 }

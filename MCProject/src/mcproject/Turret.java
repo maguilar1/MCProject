@@ -14,7 +14,7 @@ public abstract class Turret extends GSprite
 	{
 		super(image);
 
-		// final int FireDelay = 20;
+		// int FireDelay = 20;
 		this.addListener(new FrameListener() 
 		{
 		
@@ -26,8 +26,9 @@ public abstract class Turret extends GSprite
 				fireBullet();
 				
 			//if(FireDelay <0){
-			//	FireDelay = 24;
-				//}
+				
+				//fireBullet = 24;
+			//}
 	
 		
 		}});

@@ -15,6 +15,6 @@ public class TurretOne extends Turret {
 	}
 
 	public double getBulletSpeed() {
-		return 30; 
+		return 50; 
 	}
 }

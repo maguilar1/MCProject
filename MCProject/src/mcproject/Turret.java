@@ -10,25 +10,31 @@ import jgame.listener.FrameListener;
 
 public abstract class Turret extends GSprite
 {
+	int FireDelay = 20;
+	
+	
 	public Turret(Image image)
 	{
 		super(image);
 
-		// int FireDelay = 20;
+		
 		this.addListener(new FrameListener() 
 		{
 		
 			public void invoke(GObject target, Context context)
 			{
+				FireDelay --;
 				target.face(getParent().getWidth() / 2,
 						getParent().getHeight() / 2);
 				target.setRotation(target.getRotation());
 				fireBullet();
 				
-			//if(FireDelay <0){
+			if(FireDelay <0){
 				
-				//fireBullet = 24;
-			//}
+				fireBullet();
+				
+				FireDelay = 24;
+			}
 	
 		
 		}});

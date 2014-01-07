@@ -42,24 +42,6 @@ public class MenuArea extends GContainer {
 
 	{
 
-		/*
-		 * if (settingTurret) { return; } settingTurret = true; // TurretOne t1
-		 * = new // TurretOne(ImageCache.getImage("turrets/MCNote4.png"));
-		 * Turret t = chooseTurret(tn); this.l1pa.addAtCenter(t); final
-		 * MouseLocationController mlc = new MouseLocationController();
-		 * t.addController(mlc); final LocalClickListener dropListener = new
-		 * LocalClickListener() {
-		 * 
-		 * public void invoke(GObject target, Context context) {
-		 * target.removeController(mlc); target.removeListener(this);
-		 * settingTurret = false; } }; t.addListener(dropListener); }
-		 * 
-		 * public Turret chooseTurret(int turretNumber) { switch (turretNumber)
-		 * { case 0: return new
-		 * TurretOne(ImageCache.getImage("turrets/MCNote4.png")); case 1: return
-		 * new TurretTwo(ImageCache.getImage("turrets/MCNote5.png")); case 2:
-		 * return new TurretThree(ImageCache.getImage("turrets/MCNote6.png"));
-		 * default: return null; }
-		 */
+		
 	}
 }

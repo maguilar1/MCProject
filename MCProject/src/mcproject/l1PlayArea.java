@@ -17,10 +17,11 @@ public class l1PlayArea extends GContainer {
 		setSize(900, 700);
 		this.setBackgroundColor(Color.black);
 
-		BufferedImage bgi = ImageCache.getImage("areas/mcs1.png");
+		BufferedImage bgi = ImageCache.getImage("areas/mcs3.png");
 		GSprite gs = new GSprite(bgi);
 		setBackgroundSprite(gs);
 
+		
 		final TimerListener tl = new TimerListener(30) {
 
 			@Override
@@ -33,11 +34,34 @@ public class l1PlayArea extends GContainer {
 	}
 
 	public void addRandomEnemy() {
-		int i = (int) Math.random() * 5;
-		Enemy e = new Enemy1();
-		if(1 > i){
-		e = new Enemy1();
-		 }
-		add(e);
+		double num = Math.random()*5 + 1;
+		int i = (int)num;
+		//Enemy e = Enemy2();
+		System.out.println(" i = " + i);
+		if(i==1){
+			Enemy e = new Enemy1();
+			add(e);
+		 	}
+		if(i==2){
+			Enemy e = new Enemy2();
+			add(e);
+			 }
+		if(i==3){
+			Enemy e = new Enemy3();
+			add(e);
+			 }
+		if(i==4){
+			Enemy e = new Enemy4();
+			add(e);
+			 }
+		if(i==5){
+			Enemy e = new Enemy5();
+			add(e);
+			 }
+		
+		/*Enemy e = new Enemy5();
+		add(e);*/
+		
+		
 	}
 }

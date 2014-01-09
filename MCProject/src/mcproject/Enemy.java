@@ -1,8 +1,10 @@
 package mcproject;
 
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Polygon;
 
+import jgame.GObject;
 import jgame.GSprite;
 import jgame.controller.PolygonController;
 import jgame.controller.PulsateController;
@@ -34,6 +36,39 @@ public abstract class Enemy extends GSprite {
 		pc1.setProperties(PulsateController.SCALE, PulsateController.ALPHA);
 		addListener(bd);
 		addController(pc1);
+		
+		  //BoundaryRemovalListener brl = new BoundaryRemovalListener();
+          
+         // addListener(brl);
+		
 	}
+	/*
+    public abstract double getSlowness();
 
-}
+    @Override
+    public void preparePaint(Graphics2D g) {
+            super.preparePaint(g);
+            GObject.antialias(g);
+            goodImageTransforms(g);
+    }
+
+    public double getCurrentHealth() {
+            return getCurrentHealth();
+    }
+/*
+    public void setCurrentHealth(double currentHealth) {
+            
+            this.currentHealth = currentHealth;
+            hb.setHealthPercentage(this.currentHealth / maxHealth);
+            if (currentHealth <= 0) {
+                    Bank.addMoney(kPs);
+                    this.removeSelf();
+            
+
+            }
+       */     
+
+    }
+	
+	
+

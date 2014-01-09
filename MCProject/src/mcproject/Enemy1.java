@@ -8,5 +8,9 @@ public class Enemy1 extends Enemy {
 		super(ImageCache.getImage("notes/note1.png"));
 		
 	}
+	   //public double getSlowness() {
+           
+           //return 3.5;
+   }
 
-}
+

@@ -21,14 +21,14 @@ public class MCMenuView extends GContainer {
 		GSprite hover_img = new GSprite(ImageCache.getImage("buttons/hover1.png"));
 		GSprite pressed_img = new GSprite(ImageCache.getImage("buttons/pressed1.png"));
 
-		GSprite none_imgs = new GSprite(ImageCache.getImage("buttons/none.png"));
-		GSprite hover_imgs = new GSprite(ImageCache.getImage("buttons/hover.png"));
-		GSprite pressed_imgs = new GSprite(ImageCache.getImage("buttons/pressed.png"));
+		GSprite none_imgs = new GSprite(ImageCache.getImage("buttons/none2.png"));
+		GSprite hover_imgs = new GSprite(ImageCache.getImage("buttons/hover2.png"));
+		GSprite pressed_imgs = new GSprite(ImageCache.getImage("buttons/pressed2.png"));
 
-		GSprite none_imge = new GSprite(ImageCache.getImage("buttons/none.png"));
-		GSprite hover_imge = new GSprite(ImageCache.getImage("buttons/hover.png"));
-		GSprite pressed_imge = new GSprite(ImageCache.getImage("buttons/pressed.png"));
-		// creating buttoms
+		GSprite none_imge = new GSprite(ImageCache.getImage("buttons/none3.png"));
+		GSprite hover_imge = new GSprite(ImageCache.getImage("buttons/hover3.png"));
+		GSprite pressed_imge = new GSprite(ImageCache.getImage("buttons/pressed3.png"));
+	
 
 		GButton play_btn = new GButton();
 		play_btn.setStateSprite(ButtonState.NONE, none_img);
@@ -41,7 +41,7 @@ public class MCMenuView extends GContainer {
 		play_btns.setStateSprite(ButtonState.HOVERED, hover_imgs);
 		play_btns.setStateSprite(ButtonState.PRESSED, pressed_imgs);
 		addAt(play_btns, 100, 300);
-
+		
 		GButton play_btne = new GButton();
 		play_btne.setStateSprite(ButtonState.NONE, none_imge);
 		play_btne.setStateSprite(ButtonState.HOVERED, hover_imge);
@@ -57,4 +57,13 @@ public class MCMenuView extends GContainer {
 		};
 		play_btn.addListener(play_btnlist);
 	}
+	public void instructions(){
+	}
+	ButtonListener play_btnlist = new ButtonListener() {
+	public void mouseClicked(Context context){
+		super.mouseClicked(context);
+		context.setCurrentGameView(View.MENU);
+	}
+	};
+	//play_btn.addListener(play_btnlist);
 }

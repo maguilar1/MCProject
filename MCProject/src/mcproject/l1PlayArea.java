@@ -24,9 +24,9 @@ public class l1PlayArea extends GContainer {
 		
 		final TimerListener tl = new TimerListener(30) {
 
-			@Override
+			
 			public void invoke(GObject target, Context context) {
-				addRandomEnemy();
+				//addRandomEnemy();
 			}
 		};
 		
@@ -37,7 +37,7 @@ public class l1PlayArea extends GContainer {
 		double num = Math.random()*5 + 1;
 		int i = (int)num;
 		//Enemy e = Enemy2();
-		System.out.println(" i = " + i);
+		//System.out.println(" i = " + i);
 		if(i==1){
 			Enemy e = new Enemy1();
 			add(e);
@@ -59,8 +59,6 @@ public class l1PlayArea extends GContainer {
 			add(e);
 			 }
 		
-		/*Enemy e = new Enemy5();
-		add(e);*/
 		
 		
 	}

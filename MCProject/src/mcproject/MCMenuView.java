@@ -53,17 +53,9 @@ public class MCMenuView extends GContainer {
 			public void mouseClicked(Context context) {
 				super.mouseClicked(context);
 				context.setCurrentGameView(View.LEVEL_ONE);
+				
 			}
 		};
 		play_btn.addListener(play_btnlist);
 	}
-	public void instructions(){
-	}
-	ButtonListener play_btnlist = new ButtonListener() {
-	public void mouseClicked(Context context){
-		super.mouseClicked(context);
-		context.setCurrentGameView(View.MENU);
-	}
-	};
-	//play_btn.addListener(play_btnlist);
 }

@@ -11,7 +11,7 @@ import jgame.controller.ConstantMovementController;
 import jgame.listener.FrameListener;
 
 public abstract class Turret extends GSprite {
-	 int FireDelay = 20;
+	int FireDelay = 20;
 
 	//private int counter = 5;
 
@@ -30,23 +30,25 @@ public abstract class Turret extends GSprite {
 				target.setRotation(target.getRotation());
 				fireBullet();
 
-				 if(FireDelay <0){
+				if(FireDelay <0){
 
 				 fireBullet();
 
 				 FireDelay = 24;
-				 }
+				}
 
-			}
+		}
 		});
-
 	}
+	
 
 	public abstract Bullet createBullet();
 
 	public abstract double getBulletSpeed();
 
-	public void fireBullet() {
+
+	public void fireBullet(){
+		
 		final Bullet b = createBullet();
 		b.setRotation(this.getRotation());
 
@@ -58,4 +60,6 @@ public abstract class Turret extends GSprite {
 		this.addSibling(b);
 
 	}
+		
+		
 }

@@ -64,7 +64,7 @@ public Turret chooseTurret(int turretNumber) {
 	private boolean settingTurret = false;
 	
 	
-	   public void changeMoneyBankValue(int delta) {
+public void changeMoneyBankValue(int delta) {
            moneyBank.changeBankValue(delta);
    }
 	
@@ -117,34 +117,15 @@ public Turret chooseTurret(int turretNumber) {
                 }
         };
         t.addListener(dropListener);
+	};
 }
 
-public Turret chooseTurret(int turretNumber) {
-        switch (turretNumber) {
-        case 0:
-                return new TurretOne();
-        case 1:
-                return new TurretTwo();
-        case 2:
-                return new TurretThree();
-        case 3:
-                return new TurretFour();
-        case 4:
-                return new TurretFive();
-
-        default:
-                return null;
-        }
-
-}
-
-public void changeLifeBankValue(int delta) {
+public void changeLifeBankValue(int delta) 
+{
         lifeBank.changeBankValue(delta);
 }
 
 }
-		
-		
 		settingTurret = true;
 		TurretOne t1 = new TurretOne();
 		Turret t = chooseTurret(tn);
@@ -153,30 +134,13 @@ public void changeLifeBankValue(int delta) {
 		t.addController(mlc);
 		final LocalClickListener dropListener = new LocalClickListener() {
 
-			public void invoke(GObject target, Context context) {
-				target.removeController(mlc);
-				target.removeListener(this);
-				settingTurret = false;
+		public void invoke(GObject target, Context context) {
+			target.removeController(mlc);
+			target.removeListener(this);
+			settingTurret = false;
 			}
 		};
 		t.addListener(dropListener);
-	}
-
-	public Turret chooseTurret(int turretNumber) {
-		switch (turretNumber) {
-		case 0:
-			return new TurretOne();
-		case 1:
-			return new TurretTwo();
-		case 2:
-			return new TurretThree();
-		case 3:
-			return new TurretFour();
-		case 4:
-			return new TurretFive();
-		default:
-			return null;
-		}
 	}
 
 }*/

@@ -4,7 +4,7 @@ import java.awt.Image;
 
 import jgame.ImageCache;
 
-public class TurretTwo extends Turret {
+public  class TurretTwo extends Turret {
 
 	
 		 public TurretTwo() 
@@ -22,5 +22,6 @@ public class TurretTwo extends Turret {
 		  return 30;
 		 
 		}
+
 		
 }

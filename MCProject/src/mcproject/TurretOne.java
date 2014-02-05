@@ -4,7 +4,7 @@ import java.awt.Image;
 
 import jgame.ImageCache;
 
-public class TurretOne extends Turret {
+public  class TurretOne extends Turret {
 
 	public TurretOne() {
 		super(ImageCache.getImage("turrets/d1.png"));
@@ -17,4 +17,7 @@ public class TurretOne extends Turret {
 	public double getBulletSpeed() {
 		return 30; 
 	}
+
+	
+	
 }

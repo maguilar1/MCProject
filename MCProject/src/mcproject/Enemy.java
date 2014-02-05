@@ -5,6 +5,7 @@ import java.awt.Image;
 import java.awt.Polygon;
 import java.awt.image.BufferedImage;
 
+import jgame.Context;
 import jgame.GObject;
 import jgame.GSprite;
 import jgame.ImageCache;
@@ -41,15 +42,69 @@ public abstract class Enemy extends GSprite {
 		addListener(bd);
 		addController(pc1);
 		
-		  //BoundaryRemovalListener brl = new BoundaryRemovalListener();
-          
-         // addListener(brl);
-		}
-	
+		 FrameListener flCheckBounds = new FrameListener() {
+             @Override
+             public void invoke(GObject target, Context context) {
+                     if (target.distanceTo(97, 296 + 250) < 3) {
+                            
+                                            
+                             target.removeSelf();
+                     }
+             }
+     };
+     
+
+     
+     addListener(flCheckBounds);
+
+     pc.goToStart(this);
+     pc.setRotateToFollow(false);
+
+   
+
+     BoundaryRemovalListener brl = new BoundaryRemovalListener();
+     this.addListener(brl);
+		
+	}
 }
 	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		
+		pc.goToStart(this);
+		addController(pc);
+		BoundaryRemovalListener bd = new BoundaryRemovalListener();
+		PulsateController pc1 = new PulsateController(0.8, 0.2, 30);
+		pc1.setProperties(PulsateController.SCALE, PulsateController.ALPHA);
+		addListener(bd);
+		addController(pc1);
+		
+		  BoundaryRemovalListener brl = new BoundaryRemovalListener();
+          
+          addListener(brl);
+		}
 	
-	/*
+	
+	
+	
     public abstract double getSlowness();
 
     @Override
@@ -59,23 +114,11 @@ public abstract class Enemy extends GSprite {
             goodImageTransforms(g);
     }
 
-    public double getCurrentHealth() {
-            return getCurrentHealth();
-    }
-/*
-    public void setCurrentHealth(double currentHealth) {
-            
-            this.currentHealth = currentHealth;
-            hb.setHealthPercentage(this.currentHealth / maxHealth);
-            if (currentHealth <= 0) {
-                    Bank.addMoney(kPs);
-                    this.removeSelf();
-            
+  
 
-            }
-           
-
+    
     }
+      
 	
 /*
     private double maxHealthPoints = 100;

@@ -2,7 +2,7 @@ package mcproject;
 
 import jgame.ImageCache;
 
-public class TurretFive extends Turret {
+public  class TurretFive extends Turret {
 
 	public TurretFive() {
 		super(ImageCache.getImage("turrets/d5.png"));
@@ -13,6 +13,13 @@ public class TurretFive extends Turret {
 	}
 
 	public double getBulletSpeed() {
-		return 30;
+		return 20;
+		
+		
 	}
+
+
+	
+
+	
 }

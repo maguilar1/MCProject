@@ -16,6 +16,9 @@ public class MCMenuView extends GContainer {
 
 		MenuBackground bg = new MenuBackground();
 		addAtCenter(bg);
+		   
+		
+
 
 		GSprite none_img = new GSprite(ImageCache.getImage("buttons/none1.png"));
 		GSprite hover_img = new GSprite(ImageCache.getImage("buttons/hover1.png"));
@@ -58,4 +61,8 @@ public class MCMenuView extends GContainer {
 		};
 		play_btn.addListener(play_btnlist);
 	}
-}
+
+	
+	}
+	
+

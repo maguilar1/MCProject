@@ -26,7 +26,7 @@ public class l1PlayArea extends GContainer {
 
 			
 			public void invoke(GObject target, Context context) {
-				//addRandomEnemy();
+				addRandomEnemy();
 			}
 		};
 		
